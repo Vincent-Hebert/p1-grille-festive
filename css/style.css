@@ -140,48 +140,37 @@ body {
         display: none;
     }
 }
-/* -----------header----------- */
+/* -----------nav----------- */
 header {
     font-size: 1.4rem;
 }
-nav{
+ul.nav__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
     background-color: #0C1D39;
 }
-.nav__list {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0
-}
 
-.nav--header  .nav__list {
-    color: black;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin: 0
-}
+ul.nav__list li {float: left;}
 
-.nav--header  .nav__link {
-    color: black;
-    font-weight: 700;
-    display: inline-block;
-    margin: auto;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    padding: 1rem;
+ul.nav__list li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
-    font-size: 1.4rem;
 }
 
-@media (min-width:600px) {
-    .nav--header .nav__link {
-        font-size: 1.6rem;
-        margin: 0 2rem
-    }
+ul.nav__list li a:hover:not(.active) {background-color: #111;}
+
+ul.nav__list li a.active {background-color: #333;}
+
+ul.nav__list li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+    ul.nav__list li.right,
+    ul.nav__list li {float: none;}
 }
 a {
     background-color: transparent;
@@ -191,38 +180,120 @@ h1, h2, h3 {
     color: white;
     text-align: center;
 }
-h1 {
-    font-size: 2.4rem;
-    color: white;
-}
-figure {
-    margin: 0;
-}
-figure {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 40px;
-    margin-inline-end: 40px;
-    text-align: center;
-}
 /* -----------image----------- */
 img {
     max-width: 100%;
     border-style: none;
 }
-.encadres{
-    background-color: #0C1D39;
+/* -----------les texte-----------*/
+h1 {
+    font-size: 2.4rem;
+    color: white;
 }
-/* -----------Avant bas de pages----------- */
 section {
     display: block;
 }
-/* -----------bas de pages-----------*/
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 8px;
+    margin-inline-end: 8px;
+    color: white;
+}
+/* -----------animation css-----------*/
+.titre{
+    border-top: solid 2px white;
+}
+.citation{
+    text-align: center;
+    animation-duration: 5s;
+    animation-name: slidein;
+}
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+.citation{
+    background-color: #0C1D39;
+}
+/* -----------console-----------*/
+.xbox {
+    background-color: #495259;
+    text-align: center;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+.ps4 {
+    background-color: #97398D;
+    text-align: center;
+    animation-duration: 5s;
+    animation-name: slidein;
+}
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+.Ordinateur {
+    background-color: #070707;
+    text-align: center;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+.header-images_console {
+    text-align: center;
+    width: 332px;
+    height: 331px;
+}
+/* -----------Deuxieme citation-----------*/
+.encadres{
+    background-color: #0C1D39;
+    text-align: center;
+}
+.credits{
+    margin-left: 10px;
+}
 footer {
     background-color: black;
     margin: 2rem 0 0;
 }
+/* -----------bas de pages-----------*/
 footer {
     display: block;
 }
@@ -236,38 +307,4 @@ small {
 }
 small {
     font-size: smaller;
-}
-p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 8px;
-    margin-inline-end: 8px;
-    color: white;
-}
-.citation{
-    background-color: #0C1D39;
-}
-.xbox {
-    background-color: #495259;
-    text-align: center;
-}
-.ps4 {
-    background-color: #97398D;
-    text-align: center;
-}
-.Ordinateur {
-    background-color: #070707;
-    text-align: center;
-}
-.header-images_console {
-    text-align: center;
-    width: 332px;
-    height: 331px;
-}
-.credits{
-    margin-left: 10px;
-}
-.titre{
-    border-top: solid 2px white;
 }
