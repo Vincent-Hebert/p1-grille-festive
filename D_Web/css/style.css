@@ -168,18 +168,30 @@ ul.nav__list li.right {float: right;}
 a {
     background-color: transparent;
 }
-h1, h2, h3 {
+h1 {
     font-size: 1.6rem;
     line-height: 1;
     color: white;
     text-align: center;
 }
 @media (min-width: 600px) {
-    .h1, h2, h3 {
+    .h1 {
         font-size: 2.4rem;
         line-height: 1;
         color: white;
         text-align: center;
+    }
+}
+h2, h3 {
+    font-size: 1.6rem;
+    line-height: 1;
+    color: white;
+}
+@media (min-width: 600px) {
+    .h2, h3 {
+        font-size: 2.4rem;
+        line-height: 1;
+        color: white;
     }
 }
 /* -----------image----------- */
@@ -229,7 +241,6 @@ p {
     border-top: solid 2px white;
 }
 .citation{
-    text-align: center;
     animation-duration: 5s;
     animation-name: slidein;
 }
@@ -282,6 +293,7 @@ p {
         width: 100%;
     }
 }
+
 .Ordinateur {
     background-color: #070707;
     text-align: center;
@@ -312,7 +324,9 @@ p {
 /* -----------Deuxieme citation-----------*/
 .encadres{
     background-color: #0C1D39;
-    text-align: center;
+}
+.encadres img{
+    width: 100%;
 }
 .credits{
     margin-left: 10px;
@@ -335,4 +349,19 @@ small {
 }
 small {
     font-size: smaller;
+}
+@media (min-width: 600px) {
+    .page section:nth-child(even){
+    display: flex;
+        flex-direction: row-reverse;
+    justify-content: flex-start;
+    text-align: right;
+    }
+}
+@media (min-width: 600px) {
+.page section:nth-child(odd) {
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+}
 }
